@@ -88,7 +88,7 @@ const DevTankDefinitions: TankDefinition[] = [
         invisibilityRate: 0,
         preAddon: "spike",
         postAddon: null,
-        maxHealth: 50,
+        maxHealth: 25,
         borderWidth: 15,
         sides: 1,
         stats: [
