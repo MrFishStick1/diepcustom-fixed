@@ -4416,7 +4416,7 @@ const TankDefinitions = JSON.parse(`[
         "invisibilityRate": 0.2,
         "fieldFactor": 1.5,
         "absorbtionFactor": 1,
-        "speed": 2,
+        "speed": 5,
         "maxHealth": 500,
         "preAddon": null,
         "postAddon": null,
