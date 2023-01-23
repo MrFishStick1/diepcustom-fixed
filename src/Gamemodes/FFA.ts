@@ -19,12 +19,28 @@
 import GameServer from "../Game";
 import ArenaEntity from "../Native/Arena";
 import { ArenaFlags } from "../Const/Enums";
+import ShapeManager from "../Entity/Shape/Manager";
+
 /**
  * FFA Gamemode Arena
  */
+
+export class SandboxShapeManager extends ShapeManager {
+    protected get wantedShapes() {
+        let i = 0;
+        for (const client of this.game.clients) {
+            if (client.camera) i += 1;
+        }
+        return Math.floor(i * 12.5);
+    }
+}
 export default class FFAArena extends ArenaEntity {
+    protected shapes: ShapeManager = new SandboxShapeManager(this);
     public constructor(game: GameServer) {
+        
         super(game);
+        this.updateBounds(15000, 15000);
+
         this.arenaData.values.flags |= ArenaFlags.canUseCheats;
     }
 }
