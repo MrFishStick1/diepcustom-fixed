@@ -4407,14 +4407,14 @@ const TankDefinitions = JSON.parse(`[
         "upgrades": [],
         "flags": {
             "invisibility": true,
-            "zoomAbility": false,
+            "zoomAbility": true,
             "canClaimSquares": false,
             "devOnly": false
         },
         "visibilityRateShooting": 0.23,
         "visibilityRateMoving": 0.00,
         "invisibilityRate": 0.2,
-        "fieldFactor": 1.5,
+        "fieldFactor": 0.9,
         "absorbtionFactor": 1,
         "speed": 4,
         "maxHealth": 1000,
